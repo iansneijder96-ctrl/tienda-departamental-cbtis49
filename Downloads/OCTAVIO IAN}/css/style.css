@@ -1,0 +1,116 @@
+:root {
+  --primary: #2c3e50;
+  --accent: #3498db;
+  --bg: #ecf0f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  display: flex;
+  background: var(--bg);
+  color: #222;
+}
+
+nav {
+  width: 250px;
+  background: var(--primary);
+  color: white;
+  height: 100vh;
+  padding: 20px;
+}
+
+nav h2 {
+  margin-top: 0;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  padding: 15px;
+  cursor: pointer;
+  list-style: none;
+  transition: 0.3s;
+  border-radius: 6px;
+}
+
+nav li:hover {
+  background: var(--accent);
+}
+
+main {
+  flex: 1;
+  padding: 30px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.section-title {
+  margin-top: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0 20px;
+}
+
+.controls input,
+.controls select,
+.controls button {
+  padding: 8px 10px;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+@media print {
+  nav,
+  button {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .card {
+    border: 1px solid #000;
+    box-shadow: none;
+  }
+}

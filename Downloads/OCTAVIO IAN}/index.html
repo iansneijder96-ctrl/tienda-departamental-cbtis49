@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema Departamental - CBTIS 49</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav>
+    <h2>Tienda CBTIS 49</h2>
+    <ul>
+      <li onclick="showSection('inventario')">📦 Inventario</li>
+      <li onclick="showSection('ventas')">💳 Ventas</li>
+      <li onclick="showSection('compras')">🛒 Compras</li>
+      <li onclick="showSection('reportes')">📊 Reportes Stock</li>
+    </ul>
+  </nav>
+
+  <main id="content">
+    <section id="welcome">
+      <h1>Bienvenido al Sistema</h1>
+      <p>Seleccione un módulo del menú para comenzar.</p>
+    </section>
+  </main>
+
+  <div id="orden-compra-container" style="display: none" class="card">
+    <div id="print-area">
+      <h2>ORDEN DE COMPRA</h2>
+      <p>Folio: <span id="folio-orden"></span> | Fecha: <span id="fecha-orden"></span></p>
+      <div id="detalle-orden"></div>
+    </div>
+    <button onclick="window.print()">Imprimir PDF</button>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
